@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .container {
+            max-width: 900px; /* Wider container */
+            width: 100%; /* Full width */
+            background: rgba(255, 255, 255, 0.8); /* White transparent box */
+            padding: 30px; /* Increased padding for neatness */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            position: relative; /* Position for absolute elements */
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        .job {
+            margin-bottom: 20px; /* Space between job entries */
+            padding: 10px;
+            border-left: 3px solid #3498db; /* Left border for hierarchy */
+            position: relative; /* Position for absolute elements */
+        }
+
+        .job h3 {
+            color: #34495e; /* Darker color for job titles */
+            margin: 0; /* Remove margin for job title */
+        }
+
+        .job p {
+            margin: 5px 0; /* Space above and below paragraphs */
+            color: #555; /* Lighter color for job details */
+        }
+
+        .job span {
+            font-weight: bold; /* Bold for roles and companies */
+            color: #2c3e50; /* Color for roles and companies */
+        }
+
+        /* Line connecting the jobs */
+        .job::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 100%; /* Align to the bottom of the job */
+            width: 3px; /* Width of the connecting line */
+            height: 20px; /* Length of the line */
+            background-color: #3498db; /* Color of the line */
+            z-index: -1; /* Behind the content */
+        }
+
+        /* Remove last line */
+        .job:last-of-type::after {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Experience</h2>
+
+        <div class="job">
+            <h3><span>Secretary</span> - Technosaviour Club, Dwaraka Doss Goverdhan Doss Vaishnav College</h3>
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Duration:</strong> August 2024 - Present</p>
+            <p>Responsible for coordinating club activities and managing communications.</p>
+        </div>
+
+        <div class="job">
+            <h3><span>Assistant Blood Secretary</span> - NSS, Dwaraka Doss Goverdhan Doss Vaishnav College</h3>
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Duration:</strong> January 2024 - Present</p>
+            <p>Assisted in organizing blood donation drives and awareness campaigns.</p>
+        </div>
+
+        <div class="job">
+            <h3><span>Volunteer</span> - Bhumi (NGO)</h3>
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Duration:</strong> September 2023 - Present</p>
+            <p>Contributed to various community service initiatives and educational programs.</p>
+        </div>
+
+        <div class="job">
+            <h3><span>Joint Secretary</span> - Technosaviour Club, Dwaraka Doss Goverdhan Doss Vaishnav College</h3>
+            <p><strong>Location:</strong> Chennai</p>
+            <p><strong>Duration:</strong> July 2023 - April 2024</p>
+            <p>Supported club activities and helped manage team efforts.</p>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

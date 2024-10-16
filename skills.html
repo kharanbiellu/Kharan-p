@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        .container {
+            max-width: 900px; /* Wider container */
+            width: 100%; /* Full width */
+            background: rgba(255, 255, 255, 0.8); /* White transparent box */
+            padding: 30px; /* Increased padding for neatness */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+
+        h2 {
+            color: #2c3e50;
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Space below the heading */
+        }
+
+        h3 {
+            color: #34495e; /* Darker color for subheadings */
+            margin-top: 20px; /* Space above the subheading */
+            display: flex;
+            justify-content: space-between; /* Align text and arrow */
+            align-items: center; /* Center vertically */
+            cursor: pointer; /* Pointer cursor for clickable items */
+            padding: 10px 0; /* Space around heading */
+            border-bottom: 1px solid #ddd; /* Underline for separation */
+        }
+
+        .arrow {
+            width: 15px; /* Arrow shape size */
+            height: 15px; /* Arrow shape size */
+            border: solid #34495e; /* Arrow color */
+            border-width: 0 3px 3px 0; /* Arrow shape */
+            display: inline-block; /* Inline block for positioning */
+            padding: 3px;
+            transform: rotate(45deg); /* Initial rotation for right arrow */
+            transition: transform 0.3s; /* Smooth transition */
+        }
+
+        .skills-list {
+            display: none; /* Initially hidden */
+            list-style-type: disc; /* Bullet points */
+            padding-left: 20px; /* Indentation for list items */
+            line-height: 1.6; /* Improved line spacing for readability */
+            margin-top: 10px; /* Space above the list */
+        }
+
+        .skills-list li {
+            color: #34495e; /* Darker text color for contrast */
+            padding: 5px 0; /* Space between list items */
+        }
+    </style>
+    <script>
+        function toggleSkills(category) {
+            const list = document.getElementById(category + '-list');
+            const arrow = document.getElementById(category + '-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block'; // Show the list
+                arrow.style.transform = 'rotate(225deg)'; // Rotate arrow to point down
+            } else {
+                list.style.display = 'none'; // Hide the list
+                arrow.style.transform = 'rotate(45deg)'; // Reset arrow to point right
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Skills</h2>
+        <h3 onclick="toggleSkills('technical')">Technical Skills <div id="technical-arrow" class="arrow"></div></h3>
+        <ul id="technical-list" class="skills-list">
+            <li>Good Lab Practices</li>
+            <li>Microsoft Office</li>
+            <li>Cell and Molecular Biology Techniques</li>
+            <li>Biochemical Tests for Biological Materials</li>
+            <li>Blood Grouping</li>
+            <li>Diagnosis of Certain Immune Based Diseases</li>
+            <li>Bioinformatics Tools</li>
+            <li>Microbiology Techniques</li>
+        </ul>
+
+        <h3 onclick="toggleSkills('soft')">Soft Skills <div id="soft-arrow" class="arrow"></div></h3>
+        <ul id="soft-list" class="skills-list">
+            <li>Communication</li>
+            <li>Problem-Solving</li>
+            <li>Leadership</li>
+            <li>Teamwork</li>
+            <li>Adaptability</li>
+            <li>Time Management</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
